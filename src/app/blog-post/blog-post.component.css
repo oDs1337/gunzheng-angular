@@ -1,0 +1,23 @@
+.post{
+  width: 800px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.image{
+  width: 400px;
+  height: 400px;
+}
+.title{
+  width: 400px;
+  height: 100px;
+}
+.link{
+  width: 400px;
+  height: 100px;
+}
+.description{
+  width: 400px;
+  height: 200px;
+}
