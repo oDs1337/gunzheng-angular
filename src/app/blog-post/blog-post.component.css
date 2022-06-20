@@ -21,3 +21,9 @@
   width: 400px;
   height: 200px;
 }
+.navigationInfo{
+  width: 800px;
+  height: 64px;
+
+  border: 1px solid red;
+}
