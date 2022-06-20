@@ -1,3 +1,4 @@
+import { Post } from './../post';
 import { PostService } from './../services/post.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,13 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogPostComponent implements OnInit {
 
+  post$: Post[] = [];
+
   constructor(public postService: PostService) { }
 
   ngOnInit(): void {
+    this.postService.fetchPosts();
+    this.postService.getPosts();
   }
 
-  get(): void{
-    this.postService.getPosts();
+  getPosts(): void{
+    this.post$ = this.postService.getPosts().reverse();
+    console.log(this.post$);
   }
 
 }
