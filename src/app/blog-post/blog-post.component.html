@@ -1,19 +1,26 @@
 <div class="navigationInfo">
-
+  <button mat-fab color="primary" [disabled]="this.postService.getCurrentPostNumber() === 0" (click)="this.postService.previousPost()">
+    <mat-icon>arrow_left</mat-icon>
+  </button>
+  <div class="currentPostInfo">
+    <span>{{this.postService.getCurrentPostNumber() + 1}} of {{this.postService.getPostLength()}}</span>
+  </div>
+  <button mat-fab color="primary" [disabled]="this.postService.getCurrentPostNumber() === (this.postService.getPostLength() - 1)" (click)="this.postService.nextPost()">
+    <mat-icon>arrow_right</mat-icon>
+  </button>
 </div>
 <div class="post">
   <div class="image">
-    image
+    {{this.postService.getPost().image}}
   </div>
-  <div class="title">
-    <!-- title, author, date -->
-    title, author, date
+  <div class="title flex-center">
+    {{this.postService.getPost().title}}, {{this.postService.getPost().author}}, {{this.postService.getPost().date}}
   </div>
-  <div class="link">
-    <button (click)="getPosts()">dupa</button>
+  <div class="link flex-center">
+    link
   </div>
-  <div class="description">
-    description
+  <div class="description flex-center">
+    {{this.postService.getPost().description}}
   </div>
 </div>
 

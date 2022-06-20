@@ -24,6 +24,20 @@
 .navigationInfo{
   width: 800px;
   height: 64px;
-
-  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.currentPostInfo{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.button{
+  overflow: hidden;
+  transform: translateZ(0);
+}
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

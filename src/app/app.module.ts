@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 
 @NgModule({
@@ -22,6 +24,8 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     HttpClientModule,
+    MatButtonModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
