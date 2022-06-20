@@ -11,13 +11,13 @@
 </div>
 <div class="post">
   <div class="image">
-    {{this.postService.getPost().image}}
+    <img src={{this.postService.getPost().image}} alt="img">
   </div>
   <div class="title flex-center">
     {{this.postService.getPost().title}}, {{this.postService.getPost().author}}, {{this.postService.getPost().date}}
   </div>
   <div class="link flex-center">
-    link
+    <button mat-raised-button color="primary">YouTube</button>
   </div>
   <div class="description flex-center">
     {{this.postService.getPost().description}}

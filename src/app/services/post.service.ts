@@ -17,8 +17,7 @@ export class PostService {
 
   fetchPosts(): void{
     this.http.get<Post[]>(this.#apiURL).subscribe((res) => {
-      this.#post = res.reverse();
-      console.log(this.#post);
+      this.#post = res;
     })
   }
 
